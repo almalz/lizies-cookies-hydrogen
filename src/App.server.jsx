@@ -7,16 +7,16 @@ import NotFound from './components/NotFound.server';
 import LoadingFallback from './components/LoadingFallback';
 import CartProvider from './components/CartProvider.client';
 
-require('@shopify/hydrogen/web-polyfills');
-const fs = require('fs');
-const handleRequest = require('./dist/server');
-const indexTemplate = fs.readFileSync('./dist/client/index.html', 'utf-8');
-module.exports = function (request, response) {
-  handleRequest(request, {
-    indexTemplate,
-    streamableResponse: response,
-  });
-};
+// require('@shopify/hydrogen/web-polyfills');
+// const fs = require('fs');
+// const handleRequest = require('./dist/server');
+// const indexTemplate = fs.readFileSync('./dist/client/index.html', 'utf-8');
+// module.exports = function (request, response) {
+//   handleRequest(request, {
+//     indexTemplate,
+//     streamableResponse: response,
+//   });
+// };
 
 function App({log, pages, ...serverState}) {
   return (
